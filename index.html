@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<!-- Inicio De La Cabecera -->
+<head>
+	<!-- Para Mostrar Caracteres Especiales -->
+	<meta charset="utf-8">
+	<!-- Para Dispositivos Moviles (Responsive) Zoom Inicial Al 100%-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Palabras Clave Para Los Motores De Busqueda -->
+	<meta name="keywords" content="Mi Portafolio/>
+	
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	<!-- Compatibilidad Con Internet Explorer Busca La Version Mas Actual-->
+
+
+	<!-- Titulo De La Pagina -->
+	<title>Mi Portafolio</title>
+	
+	<!-- Inicio De Las Librerias -->
+
+	<!-- FONT AWESOME 
+		Documentacion: 
+	 	Enlace: https://fontawesome.com/v4/cheatsheet/  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Latest compiled and minified CSS
+	 	Documentacion
+		Enlace: https://getbootstrap.com/docs/4.0/getting-started/download/ 
+		-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library 
+	 	Documentacion:
+		Enlace: https://developers.google.com/speed/libraries?hl=es-419	
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript 
+		Documentacion:
+		Enlace: https://www.bootstrapcdn.com/	 
+	-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- MODIFICACIÓN [gabriel torrico]: Agregue una fuente de letras de estile pixel art  06/12/2025 -->
+	<!--Letras Pixel Art 
+		Documentacion
+		Enlace: https://fonts-google-com.translate.goog/specimen/Press+Start+2P?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc&_x_tr_hist=true 
+	-->
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+	<!-- MAIN CSS
+		Documentacion:
+		Enlace: https://developer.mozilla.org/es/docs/Web/CSS
+		Ruta De Mi Hojas De Estilos CSS
+	-->
+
+	
+
+	<!-- Fin De Las Librerias  -->
+
+	<!-- Rutas De Mis Scripts -->
+
+	<!-- Incio De Mis Rutas -->
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- MAIN JS 
+		Documentacion:
+		Enlace: https://developer.mozilla.org/es/docs/Web/JavaScript
+		Ruta De Mi Script De JavaScript 
+	-->
+	<script src="js/main.js" type="text/javascript"></script>
+
+	<!-- MAIN JQUERY 
+		Documentacion:
+		Enlace: https://jquery.com/
+		Ruta De Mi Script Jquery 
+	-->
+	<script src="js/jquery.js" type="text/javascript"></script>
+	
+	<!-- Fin De Mis Rutas -->
+</head>
+<!-- Fin De La Cabecera -->
+<body>
+
+<!-- NAVBAR -->
+<!-- NAVBAR = Barra de Navegación (Menú superior de la página) Ocupa el 100% Del Ancho De La Pantalla -->
+<section class="container-fluid mainHeader fadeIn" id="navbar">
+    <!-- Barra de navegación con estilo oscuro (inverse) -->
+    <!-- style.css -->
+    <div class="navbar navbar-inverse">
+        <!-- Contenedor con ancho fijo centrado -->
+        <div class="container">
+            <!-- CONTENEDOR PRINCIPAL DEL ENCABEZADO DEL MENÚ -->
+            <div class="navbar-header">
+                <!-- LOGO / MARCA DEL SITIO -->
+                <a class="navbar-brand" href="#">Mi Portafolio</a>
+            </div>
+            
+            <!-- CONTENEDOR DEL MENÚ -->
+            <div class="navbar-collapse">
+                <!-- LISTA DE ENLACES DE NAVEGACIÓN -->
+				 <!-- MODIFICACIÓN [gabriel torrico]: Modificacion De La Bara De Navegacion ahora esta siempre pressente y cambie los iconos y quite animaciones para optmizacion desde style.css- 06/12/2025 -->
+                <ul class="nav navbar-nav">
+                    <!-- HOME CON ICONO DE CASITA (sin texto) -->
+                    <li class="active">
+                        <a href="#" class="neon-text-1" title="Home">
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a>
+                    </li>
+                    
+                    <!-- ABOUT CON ICONO -->
+                    <li>
+                        <a href="#about" class="neon-text-1" title="About">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    
+                    <!-- SKILLS CON ICONO -->
+                    <li>
+                        <a href="#skills" class="neon-text-1" title="Skills">
+                            <span class="glyphicon glyphicon-wrench"></span>
+                        </a>
+                    </li>
+                    <!-- CONTACT ME (SOLO TEXTO) - LLEVA A CRÉDITOS -->
+                    <li>
+                        <a href="#credits" class="neon-text-1" title="Contact Me">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</section>
+    <!-- Primer Hoja -->
+	<!-- HOME -->
+	 <!-- MODIFICACIÓN [gabriel torrico]: Cambie el perfil la animacion del titulo y el fondo y las feuntes de las letras y quite animaciones para optimzacion
+	  las rutas de la imagenes estan en el style.css igual modificque el marco de la imagen desde el css se saca la ruta de la imagen de la carpeta img y tabien cambie el fondo y añadi animaciones 
+	  a los titulos desde style,css  06/12/2025 -->
+	<section class="home fadeIn">l
+					<!-- style.css -->
+		<div class="header-section">
+			<div class="container checkOutMyPortfolio">
+				  <!-- Imagen de perfil           modificada en style.css-->
+				   
+				<img src="img/perfil.jpeg" class="rounded-image">
+				<!-- Título principal  style.css-->
+				<h2 class="pixel-art">Hola Mundo..<span>!</span></h2>
+				<!-- Descripción personal -->
+				<p>Mi Nombre Es Gabriel Torrico Arce Y Soy Estudiante De Ingenieria De Sistemas</p> 
+			</div>
+		</div>
+	</section>
+
+	<!-- ABOUT US -->
+	<!-- Sección "Sobre Mí" -->
+	 <!-- MODIFICACIÓN [gabriel torrico]: - 06/12/2025 -->
+	   <!-- MODIFICACIÓN [gabriel torrico]: Igualmnete cambie el fondo de la seccion y y la funete de las letras de los paneles y solo el titulo tiene animacion y cambie colores tanto de los paneles y las letras  06/12/2025 -->
+	<section class="container-fluid about fadeIn" id="about">
+		<h3 class="pixel-art">Sobre Mi </h3>
+		<div class="container">
+			<div class="row">
+				<!-- COLUMNA IZQUIERDA: Imagen -->
+				<div class="col-sm-3 col-md-6">
+					<img class=" rounded-image " src="img/perfil.jpeg" alt="Priyanshu Tiwari">
+				</div>
+				<div class="col-sm-9 col-md-6">
+					<p>
+					<!-- COLUMNA DERECHA: Acordeón de información -->
+					<div class="panel-group" id="accordion">
+						<!-- Primer panel (abierto por defecto) -->
+						<div class="panel panel-default">
+						<!-- ... contenido del panel ... -->
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+										Caracteristica 1</a>
+								</h4>
+							</div>
+							<!-- ... contenido del panel ... -->
+							<div id="collapse1" class="panel-collapse collapse in">
+								<div class="panel-body">
+									Particularmente disfruto de las asignaturas relacionadas con sistemas operativos y talleres prácticos,
+									así como del trabajo con máquinas virtuales y otras tecnologías de virtualización
+									que permiten experimentar con diferentes entornos de desarrollo.
+								</div>
+							</div>
+						</div>
+						<!-- ... contenido del panel ... -->
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+										Caracteristica 2</a>
+								</h4>
+							</div>
+								<!-- ... contenido del panel ... -->
+							<div id="collapse2" class="panel-collapse collapse">
+								<div class="panel-body">
+									Siento una gran curiosidad por entender cómo funcionan las redes a nivel técnico: la interacción
+									de protocolos, el enrutamiento de datos, la configuración de dispositivos y los principios
+									que garantizan una comunicación eficiente y segura.
+								</div>
+							</div>
+						</div>
+						<!-- ... contenido del panel ... -->
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+										Caracteristica 3</a>
+								</h4>
+							</div>
+							<!-- ... contenido del panel ... -->
+							<div id="collapse3" class="panel-collapse collapse">
+								<div class="panel-body">
+									Mi interés por las redes, servidores y sistemas operativos, combinado con mi reciente introducción a Linux,
+									a Linux, me ha motivado a profundizar en este ecosistema. Valoro especialmente la libertad,
+									flexibilidad y alto rendimiento que ofrecen estas tecnologías, y estoy comprometido
+									con seguir aprendiendo y desarrollando mis habilidades en este campo.
+								</div>
+							</div>
+						</div>
+					</div>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SKILLS -->
+	 <!-- Sección de Habilidades y Logros -->
+	    <!-- MODIFICACIÓN [gabriel torrico]: Igualmnete cambio de fondo letras y animacion en los titulos   06/12/2025 -->
+	<section class="container-fluid skills fadeIn" id="skills"> <!-- styles.css --> 
+		<div class="study-section"> 	 <!-- Boostrap -->
+			<div class="container">
+				<div class="study-grids"> 	 <!-- CSS -->
+					<!-- COLUMNA IZQUIERDA: Logros (Achievements) -->
+					<div class="col-md-6 study-grid">   <!-- Boostrap -->
+						<h3 class="pixel-art">Proyectos.<span>!</span></h3>
+						<div class="study1"> 					<!-- style.css -->
+							<p>Sistemas De Gestion De Ventas <label>( 2024 )</label></p>
+							<p>Sistema De Gestion De Gestion De Software De Videovigilancia <label>( 2025 )</label></p>
+							<p>Sistema De Gestion De Activos De Computo <label>( 2025 )</label></p>
+							<p> Sistema De Gestion De Equipos De Red <label>( 2025 )</label></p>
+						</div>
+					</div>
+					<div class="col-md-6 study-grid"> <!-- Font Awesome -->
+						<!-- styles.css -->
+						<h3 class="pixel-art">Habilidades.<i class="fa fa-anchor" style="color:#4267b2;;"></i></h3>
+						<!-- styles.css -->
+						<div class="study2">         <!-- Font Awesome -->
+							<h4>Adminstracion Firewall Fortinet<i tyle="color:#4267b2;;"></i></h4>
+							<!-- style.css -->
+							<div class="progress">
+							<!-- boostrap -->
+								<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80"
+									aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+									<span class="sr-only">80% Complete (success)</span>
+								</div>
+							</div>
+							<h4>Windows Server</h4>
+							<!-- style.css -->
+							<div class="progress">
+							<!-- boostrap -->
+								<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70"
+									aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+									<span class="sr-only">70% Complete</span>
+								</div>
+							</div>
+							<h4>C#</h4>
+							<!-- style.css -->
+							<div class="progress">
+							<!-- boostrap -->
+								<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="90"
+									aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+									<span class="sr-only">90% Complete (warning)</span>
+								</div>
+							</div>
+							<h4>php y Mysql<h4>
+								<!-- style.css -->
+									<div class="progress">
+										<!-- boostrap -->
+										<div class="progress-bar progress-bar-danger" role="progressbar"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+											<span class="sr-only">80% Complete (danger)</span>
+										</div>
+									</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	  <!-- MODIFICACIÓN [gabriel torrico]: Cambio de fondo y animacion en el titulo y los enlaces a mi correo y el proyecto en el que me base todo desde style.css   06/12/2025 -->
+	<!-- SECCIÓN DE CRÉDITOS -->
+	<section class="credits-section pixel-art-bg" id="credits">
+		<div class="container">
+			<div class="credits-content">
+				<h3 class="pixel-art-title">✦ CRÉDITOS ✦</h3>
+				
+				<div class="credit-card">
+				<!-- style.css  -->
+					<p class="pixel-text">
+						<span class="pixel-icon">🕹️</span> Esta página web fue inspirada en:
+					</p>
+					<!-- Enlace al proyecto Del Creador -->
+					<a href="https://github.com/tpriyanshu90/portfolioTemplate.git" 
+					class="pixel-link" 
+					target="_blank">
+						<span class="pixel-icon">👨‍💻</span> Portfolio Template by Priyanshu Tiwari
+					</a>
+				</div>
+				
+				<div class="credit-card">
+					<p class="pixel-text">
+						<!-- style.css  -->
+						<span class="pixel-icon">📧</span> Contacto:
+					</p>
+					<!-- Enlace al correo electronico -->
+					<a href="mailto:gabriel.torrico.a@gmail.com" 
+					class="pixel-link">
+						<span class="pixel-icon">✉️</span> gabriel.torrico.a@gmail.com
+					</a>
+				</div>
+				
+				<p class="pixel-footer">
+					<span class="pixel-icon">🎮</span> Desarrollado con HTML5 y CSS3
+				</p>
+			</div>
+		</div>
+	</section>
+	</body>
+	<!-- Este Codigo Se Baso En El Siguiente Proeycto: https://github.com/tpriyanshu90/portfolioTemplate.git -->
+	</body>
+</html>
+
+<!-- No Utilizado -->
+	<!-- 
+	<section class="container-fluid projects fadeIn" id="projects">
+		<div class="hero">
+		  		<h1>My Projects <strong>I love them</strong> </h1>
+		  	</div> 
+		<h3 class="neon-text">My Projects</h3>
+		<div class="container ">
+			<div class="row ">
+				<div class="col-sm-4 ">
+					<div class="figure ">
+						<img class="img-responsive " src="https://robohash.org/a " alt="Thumb " width="400 "
+							height="300 " />
+						<div class="figcaption ">
+							<div>Project 1</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 ">
+					<div class="figure ">
+						<img class="img-responsive " src="https://robohash.org/b " alt="Thumb " width="400 "
+							height="300 " />
+						<div class="figcaption ">
+							<div>Project 2</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 ">
+					<div class="figure ">
+						<img class="img-responsive " src="https://robohash.org/c " alt="Thumb " width="400 "
+							height="300 " />
+						<div class="figcaption ">
+							<div>Project 3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-sm-4 ">
+					<div class="figure ">
+						<img class="img-responsive " src="https://robohash.org/d " alt="Thumb " width="400 "
+							height="300 " />
+						<div class="figcaption ">
+							<div>Project 1</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 ">
+					<div class="figure ">
+						<img class="img-responsive " src="https://robohash.org/e " alt="Thumb " width="400 "
+							height="300 " />
+						<div class="figcaption ">
+							<div>Project 2</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 ">
+					<div class="figure ">
+						<img class="img-responsive " src="https://robohash.org/f " alt="Thumb " width="400 "
+							height="300 " />
+						<div class="figcaption ">
+							<div>Project 3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<figure>
+			    <img src="https://d13yacurqjgara.cloudfront.net/users/220419/screenshots/1644214/debut-shot.jpg " alt="Thumb " width="400 " height="300 " />
+			    <figcaption><div>Thumbnail Caption</div></figcation>
+			  </figure> 
+		</div>
+	</section>
+	ONTACT ME 
+	<section class="contactMe fadeIn">
+		<div class="contact-section" id="contact">
+			<div class="container">
+				<h3 class="neon-text">contact me</h3>
+				<div class="contact-details">
+					<form>
+						<div class="col-md-6 contact-left">
+							<input type="text" class="text" value="Name *" onfocus="this.value = '';"
+								onblur="if (this.value == '') {this.value = 'Name *';}">
+							<input type="text" class="text" value="Email *" onfocus="this.value = '';"
+								onblur="if (this.value == '') {this.value = 'Email *';}">
+							<input type="text" class="text" value="phone *" onfocus="this.value = '';"
+								onblur="if (this.value == '') {this.value = 'Phone *';}">
+						</div>
+						<div class="col-md-6 contact-right">
+							<textarea value="Message" onfocus="this.value = '';"
+								onblur="if (this.value == '') {this.value = 'Message';}">Message *</textarea>
+							<input type="submit" value="Send Message" />
+						</div>
+						<div class="clearfix"> </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="container-fluid mainFooter fadeIn">
+		<div class="container">
+			<div class="footer-top">
+				<p>&copy; 2019 made with <i class="fa fa-heart"></i> by <a target="_blank"
+						href="https://tpriyanshu.bitbucket.io">Priyanshu Tiwari</a>
+				</p>
+			</div>
+			<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+	</section>
+</body>
+
+</html> -->

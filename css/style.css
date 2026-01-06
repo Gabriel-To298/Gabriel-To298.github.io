@@ -1,0 +1,1037 @@
+
+/* ESTILOS GENERALES Y RESET */
+
+body{
+	margin: 0px;
+	transition: all 1s; /* Transición suave para cambios en el body */
+}
+
+
+/* FUENTES PERSONALIZADAS */
+
+@font-face {
+    font-family: 'Nunito-Bold';
+    src:url(../fonts/Nunito-Bold.ttf) format('truetype'); /* Fuente Nunito en negrita */
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src:url(../fonts/OpenSans-Regular.ttf) format('truetype'); /* Fuente OpenSans regular */
+}
+
+
+/* NAVBAR - BARRA DE NAVEGACIÓN */
+
+/*  Navbar fijo en la parte superior (antes top: -60px) */
+.mainHeader{
+    position: fixed; 
+    top: 0 !important;  /* ← CAMBIADO: Ahora visible siempre */
+    transition: all 0.5s;
+    width: 100vw;
+    z-index: 9999;  /* ← AUMENTADO: Mayor prioridad en la capa */
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #010101;
+
+}
+
+
+/* EFECTO NEÓN PARA TEXTO */
+
+/* Efecto de texto neón azul con animación */
+.neon-text {
+  font-size: 48px; /* Tamaño de fuente ajustable */
+  color: #00c3ff; /* Color azul neón */
+  text-shadow: 0 0 5px #00c3ff, 0 0 20px #00c3ff, 0 0 40px #00c3ff, 0 0 80px #00c3ff, 0 0 120px #00c3ff, 0 0 140px #00c3ff, 0 0 180px #00c3ff; /* Múltiples sombras para efecto neón */
+  animation: glowing 1.5s ease-in-out infinite alternate; /* Animación de brillo */
+}
+
+/* ESTILO PIXEL ART */
+
+/*  Estilo de fuente pixel art para títulos */
+.pixel-art {
+  font-family: 'Press Start 2P', cursive;  /* Fuente estilo videojuego 8-bit */
+  font-size: 64px;                         /* Tamaño grande para impacto visual */
+  color: #fff;                             /* Color blanco */
+  text-transform: uppercase;               /* Texto en mayúsculas */
+  letter-spacing: 5px;                     /* Espaciado entre letras */
+}
+
+/*  Efecto glitch al pasar el mouse sobre textos pixel art */
+.pixel-art:hover {
+    animation: glitch 0.3s infinite;
+}
+
+/* Animación del efecto glitch (movimiento tembloroso) */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Versión alternativa del texto neón : No Usado  */
+.neon-text-1 {
+  /* font-size: 48px; Tamaño ajustable según necesidad */
+  /* Color y sombras se heredan del contexto */
+}
+
+
+/* ANIMACIÓN DE BRILLO NEÓN */
+
+/* Keyframes para la animación de brillo pulsante */
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px #00c3ff, 0 0 20px #00c3ff, 0 0 40px #00c3ff, 0 0 80px #00c3ff, 0 0 120px #00c3ff, 0 0 140px #00c3ff, 0 0 180px #00c3ff; /* Brillo inicial */
+  }
+  100% {
+    text-shadow: 0 0 10px #00c3ff, 0 0 40px #00c3ff, 0 0 80px #00c3ff, 0 0 160px #00c3ff, 0 0 240px #00c3ff, 0 0 280px #00c3ff, 0 0 360px #00c3ff; /* Brillo aumentado */
+  }
+}
+
+
+/* HEADER - SECCIÓN PRINCIPAL */
+/*  Fondo con imagen y efecto parallax */
+.header-section {
+  background: #deecdf;
+  background-image: url('../img/FondoPagina1.jpg'); /* Imagen de fondo desde carpeta img */
+  text-align: center;
+  min-height: 500px;
+  height:60vh;
+  background-size: cover;
+  background-position: center;     /* Centra la imagen */
+  background-attachment: fixed; /*  Efecto parallax al hacer scroll */
+}
+
+/* Margen para imagen en el header */
+.header-section img {
+  margin-top: 7em; /* Margen superior de 7em */
+}
+
+/* Estilos para título principal */
+.header-section h2 {
+  font-family: 'Press Start 2P', cursive; /* Fuente pixel art */
+  color: #fff;                            /* Color blanco */
+  font-size: 4em;                         /* Tamaño grande */
+  text-transform: capitalize;             /* Primera letra en mayúscula */
+  padding: 0.5em 0 0 0;                   /* Padding superior */
+}
+
+/* Span dentro del header */
+.header-section span {
+  color: #00cfbd; /* Color turquesa */
+  font-size: 1em; /* Tamaño normal */
+}
+
+/* Párrafo en el header */
+.header-section p {
+  font-family: 'Press Start 2P', cursive; /* Fuente pixel art */
+  color: #fff;                            /* Color blanco */
+  font-size: 1.3em;                       /* Tamaño mediano */
+}
+
+/* Icono de triángulo en el header */
+span.glyphicon.glyphicon-triangle-bottom {
+  font-size: 2em;                         /* Tamaño grande */
+  color: #fff;                            /* Color blanco */
+  background-color: rgb(0, 207, 189);     /* Fondo turquesa */
+  padding: 0.5em 2em;                     /* Padding horizontal y vertical */
+  border-radius: 5px 5px 0 0;             /* Bordes redondeados solo arriba */
+  margin-top: 2.5em;                      /* Margen superior */
+}
+
+
+/* SECCIÓN "SOBRE MÍ" */
+
+/* Fondo con imagen y parallax */
+.about{
+	background-size: cover;
+	background: #deecdf;
+  background-image: url('../img/FondoPagina2.jpg'); /*  Imagen de fondo */
+	padding-bottom: 5vw;
+	text-align: center;
+  background-attachment: fixed; /*  Efecto parallax */
+}
+
+/* Título de la sección "Sobre Mí" */
+/* Fuente cambiada a pixel art */
+.about h3{
+	font-family: 'Press Start 2P', cursive; /* ← CAMBIADO: Ahora usa fuente pixel */
+  	font-size: 2.5em;
+  	text-transform: capitalize;
+  	color: #f5f8f6; /* ← CAMBIADO: Color más claro */
+  	padding-bottom: 2%;
+}
+
+
+/* MEDIA QUERIES - RESPONSIVE */
+
+/* Ajustes para diferentes tamaños de pantalla */
+.yourPic{
+	    padding-left: 0%;
+	    transition:  all 0.5s;
+}
+
+/* Smartphones muy pequeños (200px-320px) */
+@media only screen and (min-width:200px) and (max-width:320px) {
+	.yourPic{
+	    padding-left: 0%;
+	}
+}
+
+/* Smartphones pequeños (321px-400px) */
+@media only screen and (min-width:321px) and (max-width:400px) {
+	.yourPic{
+	    padding-left: 10%;
+	}
+}
+
+/* Tablets pequeños y smartphones grandes (401px-600px) */
+@media only screen and (min-width:401px) and (max-width:600px) {
+	.yourPic{
+	    padding-left: 25%;
+	}
+}
+
+/* Tablets medianas (601px-767px) */
+@media only screen and (min-width:601px) and (max-width:767px) {
+	.yourPic{
+	    padding-left: 30%;
+	}
+}
+
+/* Tablets grandes y laptops pequeños (max 801px) */
+@media only screen and (max-width:801px) {
+}
+
+/* Laptops y desktops medianos (max 1025px) */
+@media only screen and (max-width:1025px) {
+}
+
+/* Monitores grandes (max 1281px) */
+@media only screen and (max-width:1281px) {
+}
+
+
+/* SECCIÓN HABILIDADES (SKILLS) */
+
+/* Estilos para sección de habilidades */
+/* Fondo con imagen y parallax */
+.skills {
+    background-image: url('../img/FondoPagina3.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /*   Efecto parallax */
+    padding: 60px 0;
+    color: white;
+    position: relative;
+}
+
+
+/* OTRAS SECCIONES */
+
+/* Sección Experiencia */
+.experience h3{
+	font-family: 'Nunito-Bold';
+  	font-size: 2.5em;
+  	text-transform: capitalize;
+  	color: #393b3a;
+}
+
+/* Sección Proyectos */
+.projects{
+	background-color: rgba(25,244,1,0.4);
+	padding: 5%;
+	text-align: center;	
+}
+
+.projects h3{
+	font-family: 'Nunito-Bold';
+  	font-size: 2.5em;
+  	text-transform: capitalize;
+  	color: #393b3a;
+  	margin-bottom: 2%;
+}
+
+
+/* COMPONENTES REUTILIZABLES */
+
+/* Componente Hero */
+.hero{
+  width: 100%;
+  height: 40%;
+  background: #3498db;
+  display: table;
+}
+
+/* Títulos generales h1 */
+h1{
+  color: #2c3e50;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* Figura con efecto hover */
+.figure{
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  border: 5px solid #fff;
+  box-shadow: 0 0 5px #ddd;
+  margin: 1em;
+}
+
+.figcaption{
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.figcaption div{
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: 0px;
+  opacity: 0;
+  color: #2c3e50;
+  text-transform: uppercase;
+}
+
+.figcaption div:after{
+  position: absolute;
+  content: "";
+  left: 0; right: 0;
+  bottom: 50%;
+  text-align: center;
+  margin: auto;
+  width: 0%;
+  height: 2px;
+  background: #2c3e50;
+}
+
+.figure img{
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+.figure:hover .figcaption{
+ background: rgba(255,255,255,0.3);
+}
+.figure:hover .figcaption div{
+  opacity: 1;
+}
+.figcaption:hover div{
+  opacity: 1;
+  top: 0;
+}
+
+.figcaption:hover div:after{
+  width: 50%;
+}
+
+.figure:hover img{
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+          transform: scale3d(1.2, 1.2, 1);
+}
+
+/* Sección About - ajuste de padding */
+#about{
+	padding-top: 10vh; /* Padding superior del 10% del viewport */
+}
+
+/* Carousel de texto */
+.carousel-content {
+    color:black;
+    display:flex;
+    align-items:center;
+}
+
+#text-carousel {
+  width: 100%;
+  height: auto;
+  padding: 17%;
+}
+
+/* Reset de box-sizing y transiciones */
+*, *::before, *::after{
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+
+/* FUENTES EXTERNAS */
+
+/* Importación de fuente Lato con diferentes pesos */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Lato Hairline'), local('Lato-Hairline'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+}
+
+
+/* BOTÓN "IR ARRIBA" */
+
+#myBtn {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija */
+    bottom: 20px; /* 20px desde abajo */
+    right: 30px; /* 30px desde la derecha */
+    z-index: 99; /* Alta prioridad de capa */
+    border: none; /* Sin borde */
+    outline: none; /* Sin outline */
+    background-color: #774040; /* Color de fondo */
+    color: white; /* Color de texto */
+    cursor: pointer; /* Cursor de mano */
+    padding: 15px; /* Padding interno */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de fuente */
+    transition: all 2s; /* Transición lenta */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Color más oscuro al hacer hover */
+}
+
+
+/* SECCIÓN DE ESTUDIOS/LOGROS */
+
+.study-section {
+  padding: 4em 0; /* Padding vertical */
+}
+
+/* Fuentes cambiadas a pixel art */
+.study-grid h3 {
+  font-family: 'Press Start 2P', cursive; /* ← CAMBIADO: Fuente pixel */
+  color: #fff;                            /* ← CAMBIADO: Color blanco */
+  font-size: 2.5em;
+  text-transform: capitalize;
+}
+
+.study-grid span {
+  color: #00cfbd; /* Color turquesa */
+  font-size: 0.9em; /* Tamaño pequeño */
+}
+
+/* Texto en pixel art */
+.study-grid p {
+  font-family: 'Press Start 2P', cursive; /* ← CAMBIADO: Fuente pixel */
+  color: #fff;                            /* ← CAMBIADO: Color blanco */
+  font-size: 1.2em;
+  padding: 1.1em 0 0 0;
+}
+
+/*  Etiquetas en pixel art con color rojo */
+.study-grid label {
+  font-family: 'Press Start 2P', cursive; /* ← CAMBIADO: Fuente pixel */
+  font-size: 0.8em;
+  color: #ec0707; /* ← CAMBIADO: Color rojo */
+  margin: 0 0 0 7px;
+}
+
+/* Barras de progreso */
+.progress {
+	margin: 10px 0;
+	 box-shadow: none; /* Sin sombra */
+}
+
+/* Colores de las barras de progreso */
+.progress-bar-success {
+  background-color: #DEECDF;
+   box-shadow: none;
+}
+.progress-bar-info {
+  background-color: #ACB5B8;
+    box-shadow: none;
+}
+.progress-bar-warning {
+  background-color: #78B3AE;
+   box-shadow: none;
+}
+.progress-bar-danger {
+  background-color: #8C9D82;
+  box-shadow: none;
+}
+
+/*  Títulos h4 en pixel art */
+.study-grid h4 {
+  font-family: 'Press Start 2P', cursive; /* ← CAMBIADO: Fuente pixel */
+  color: #fff;                            /* ← CAMBIADO: Color blanco */
+  font-size: 1.3em;
+  text-transform: capitalize;
+}
+
+/* Espaciados para secciones de estudio */
+.study1 {
+  padding: 1em 0 0;
+}
+.study2 {
+  padding: 2em 0 0;
+}
+
+
+/* SECCIÓN DE SERVICIOS */
+
+.service-section {
+  text-align: center;
+  padding: 4em 0;
+}
+
+.service-grid h4 {
+  font-size: 1.5em;
+  margin: 0.9em 0;
+  font-family: 'Nunito-Bold';
+}
+
+.service-grid p {
+  font-size: 1em;
+  font-weight: 400;
+  color: #9CA69D;
+  line-height: 1.8em;
+}
+
+/* Iconos de servicios */
+span.glyphicon.glyphicon-pencil {
+  font-size: 2em;
+  color: #C6D9C7;
+  border-radius: 50px;
+  border: 2px solid;
+  padding: 1em;
+}
+span.glyphicon.glyphicon-phone{
+  font-size: 2em;
+  color: #C6D9C7;
+  border-radius: 50px;
+  border: 2px solid;
+  padding: 1em;
+}
+span.glyphicon.glyphicon-signal{
+  font-size: 2em;
+  color: #C6D9C7;
+  border-radius: 50px;
+  border: 2px solid;
+  padding: 1em;
+}
+
+
+/* SECCIÓN DE CONTACTO */
+
+.contact-section {
+  padding: 4em 0;
+  background: #deecdf;
+}
+
+.contact-section h3 {
+  font-family: 'Nunito-Bold';
+  font-size: 2.5em;
+  text-transform: capitalize;
+  color: #393b3a;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+/* Campos del formulario de contacto */
+.contact-details form input[type="text"],.contact-details form textarea {
+	width: 100%;
+	padding: 1.5em 1em;
+	border: 1px solid #7ca17f;
+	font-size: 1.1em;
+	margin-bottom: 1.2em;
+	color: #Aac8ac;
+	outline: none;
+	background:transparent;
+	font-weight: 600;
+}
+
+.contact-details form textarea {
+	height: 244px;
+	resize: none;
+	width: 100%;
+}
+
+.contact-right{
+	text-align:right;
+}
+
+/* Botón de enviar formulario */
+.contact-details input[type="submit"] {
+	background: #393b3a;
+	padding: 1em 2em;
+	border: none;
+	font-size: 1em;
+	margin: 0.5em 0 0 0;
+	color: #fff;
+	outline: none;
+	font-weight: 600;
+	border-radius:5px;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+
+.contact-details input[type="submit"]:hover {
+  color: #fff;
+  background: rgb(0, 207, 189);
+}
+
+
+/* FOOTER - PIE DE PÁGINA */
+
+.mainFooter{
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.footer-top{
+	text-align: center;
+	font-family: 'Nunito-Bold';
+  	font-size: 1em;
+  	text-transform: capitalize;
+  	padding-top: 10px;
+}
+
+
+/* PANELES (ACORDEÓN) */
+
+.panel-default>.panel-heading {
+    background-color: #db0f31; /* Fondo rojo para cabecera de paneles */
+}
+
+/*  Títulos de paneles en pixel art */
+.panel-title a {
+    font-family: 'Press Start 2P', cursive; /* Fuente pixel art */
+    font-size: 16px; /* Tamaño ajustable según necesidad */
+    color: #f7f7f7; /* Color gris claro */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/*  Contenido de paneles en pixel art */
+.panel-body {
+    font-family: 'Press Start 2P', cursive; /* Fuente pixel */
+    font-size: 12px; /* Tamaño pequeño para fuentes pixel */
+    line-height: 1.8; /* Espaciado entre líneas para mejor legibilidad */
+    color: #0a0a0a; /* Color negro */
+    background-color: rgba(252, 247, 247, 0.7); /* Fondo claro semitransparente */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+/* NAVBAR ESTILOS */
+
+.navbar-inverse .navbar-nav>li:hover {
+    background-color: #9d9d9d;
+    color: white;
+    border-radius: 4px;
+}
+
+.navbar-inverse {
+    background-color: #000000;
+    border: none;
+}
+
+
+/* IMAGEN DE PERFIL */
+
+/*  marco estilo pixel art */
+.rounded-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 6px solid #0c0d0d; /* Borde negro */
+    box-shadow: 
+        0 0 0 4px #000,          /* Sombra interior negra */
+        0 0 20px #f3f4f4;        /*  Sombra blanca en lugar de neón */
+    image-rendering: pixelated;   /* Efecto pixelado */
+}
+
+
+/* SECCIÓN DE CRÉDITOS */
+
+/*  Sección completa para créditos */
+.credits-section {
+    background: url('../img/FondoPagina4.jpg'); /* Imagen de fondo */
+    background-position: center;
+    background-attachment: fixed; /* Efecto parallax */
+    padding: 60px 0;
+}
+
+.credits-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive; /* Fuente pixel art */
+}
+
+/* Título de créditos con efecto glitch */
+.pixel-art-title {
+    font-family: 'Press Start 2P', cursive;
+    color: #00c3ff;
+    font-size: 20px;
+    text-shadow: 3px 3px 0 #000;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+/* Tarjetas de crédito */
+.credit-card {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.credit-card:hover {
+    transform: translateY(-5px); /* Efecto elevación al hover */
+    box-shadow: 8px 8px 0 #ff0080;
+    border-color: #ff0080;
+}
+
+/* Texto en estilo pixel */
+.pixel-text {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    font-size: 12px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Enlaces en estilo pixel */
+.pixel-link {
+    font-family: 'Press Start 2P', cursive;
+    color: #00ff88;
+    font-size: 11px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid #00ff88;
+    transition: all 0.3s ease;
+}
+
+.pixel-link:hover {
+    background-color: #00ff88;
+    text-decoration: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff88;
+}
+
+/* Iconos con animación de rebote */
+.pixel-icon {
+    font-size: 16px;
+    margin-right: 10px;
+    display: inline-block;
+    animation: pixel-bounce 1s infinite alternate;
+}
+
+@keyframes pixel-bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-3px); }
+}
+
+/* Línea decorativa */
+.pixel-border {
+    height: 4px;
+    background: linear-gradient(90deg, 
+        #00c3ff 0%, 
+        #ff0080 25%, 
+        #00ff88 50%, 
+        #ffcc00 75%, 
+        #00c3ff 100%);
+    margin: 30px auto;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+}
+
+/* Texto del pie */
+.pixel-footer {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffcc00;
+    font-size: 10px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* Efecto glitch para títulos al pasar el mouse */
+.pixel-art-title:hover {
+    animation: glitch 0.3s infinite;
+}
+
+
+/* RESPONSIVE - CRÉDITOS */
+
+@media (max-width: 768px) {
+    .pixel-art-title {
+        font-size: 16px; /* Tamaño más pequeño en móviles */
+    }
+    
+    .pixel-text {
+        font-size: 10px;
+    }
+    
+    .pixel-link {
+        font-size: 9px;
+        padding: 8px 12px;
+    }
+    
+    .credit-card {
+        padding: 15px;
+        margin: 15px;
+    }
+}
+/* ============================= */
+/* RESPONSIVE FIX GENERAL */
+/* ============================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Evita desbordes horizontales */
+body {
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/* NAVBAR RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    float: none;
+  }
+
+  .navbar-nav > li {
+    float: none;
+    display: inline-block;
+  }
+}
+
+/* ============================= */
+/* HEADER / HOME */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .header-section {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 40px;
+    background-attachment: scroll; /* FIX móvil */
+  }
+
+  .header-section img {
+    margin-top: 120px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .header-section h2 {
+    font-size: 1.8em;
+    letter-spacing: 2px;
+  }
+
+  .header-section p {
+    font-size: 0.9em;
+    padding: 0 10px;
+  }
+}
+
+/* ============================= */
+/* PIXEL TITLES GLOBAL */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .pixel-art {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+  }
+}
+
+/* ============================= */
+/* ABOUT SECTION */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .about {
+    background-attachment: scroll;
+  }
+
+  .about img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+
+  .panel-title a {
+    font-size: 12px;
+  }
+
+  .panel-body {
+    font-size: 10px;
+  }
+}
+
+/* ============================= */
+/* SKILLS SECTION */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .skills {
+    background-attachment: scroll;
+  }
+
+  .study-grid {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .study-grid h3 {
+    font-size: 1.4em;
+  }
+
+  .study-grid p,
+  .study-grid h4 {
+    font-size: 0.9em;
+  }
+}
+
+/* ============================= */
+/* PROGRESS BARS */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .progress {
+    height: 18px;
+  }
+}
+
+/* ============================= */
+/* PROFILE IMAGE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .rounded-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ============================= */
+/* CREDITS SECTION */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .credits-section {
+    background-attachment: scroll;
+    padding: 40px 0;
+  }
+
+  .credit-card {
+    max-width: 90%;
+  }
+}
+
+/* ============================= */
+/* EXTRA SMALL DEVICES */
+/* ============================= */
+
+@media (max-width: 480px) {
+  /* ============================= */
+/* FIX CONTACTO NAVBAR MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .navbar-nav {
+    float: none !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar-nav > li {
+    float: none !important;
+    display: inline-block !important;
+  }
+
+  .navbar-nav > li > a {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+}
+
+  .pixel-art {
+    font-size: 1.2em;
+  }
+
+  .header-section h2 {
+    font-size: 1.4em;
+  }
+
+  .study-grid h3 {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 480px) {
+  .navbar-nav > li:last-child {
+    width: 100%;
+    text-align: center;
+  }
+}
+
